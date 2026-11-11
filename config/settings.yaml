@@ -1,0 +1,24 @@
+data:
+  provider: yfinance        # 数据源，以后可换
+  db_path: data/dca.db
+  start_date: "2000-01-01"   # 首次拉取的起始日期
+  retries: 3                 # 单个标的失败重试次数
+
+valuation:
+  history_years: 5           # 估值分位的回看年数
+  min_samples: 20            # 快照少于这个数时不计算分位
+
+# 提示阈值（只做提示，不自动交易）
+signals:
+  drawdown_from_high: 0.15   # 距 52 周高点回撤 >= 15% 标记“可考虑加码”
+  valuation_percentile: 0.20 # PE 处于历史 20% 分位以下标记“可考虑加码”
+  below_ma200: true          # 价格低于 200 日均线时高亮
+
+# 定投计划
+dca_plan:
+  day_of_month: 15           # 每月定投日（遇周末/节假日自行顺延）
+  remind_days_before: 2      # 提前几天提醒
+  allocations:               # 每期计划金额（美元）
+    VTI: 500
+    QQQ: 300
+    XLV: 100

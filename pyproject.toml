@@ -1,0 +1,33 @@
+[project]
+name = "dca-compass"
+version = "0.1.0"
+description = "个人美股定投追踪：行情、指标、成本与提示"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2",
+    "pyyaml>=6.0",
+    "yfinance>=0.2.50",
+    "scipy>=1.13",
+    "streamlit>=1.50",
+    "plotly>=5.24",
+]
+
+[project.scripts]
+dca-update = "dca_compass.update:main"
+dca-portfolio = "dca_compass.portfolio:main"
+dca-signals = "dca_compass.signals:main"
+dca-dashboard = "dca_compass.dashboard.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dca_compass"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,37 @@
+# 追踪标的。增删直接改这里，下次更新数据时生效。
+
+# 股指 ETF
+index_etfs:
+  SPY: 标普 500
+  QQQ: 纳斯达克 100
+  DIA: 道琼斯工业
+  IWM: 罗素 2000
+  VTI: 美国全市场
+
+# 行业 ETF：代码 -> 行业
+sector_etfs:
+  XLK: Technology
+  XLF: Financials
+  XLV: Health Care
+  XLE: Energy
+  XLY: Consumer Discretionary
+  XLP: Consumer Staples
+  XLI: Industrials
+  XLC: Communication Services
+  XLU: Utilities
+  XLB: Materials
+  XLRE: Real Estate
+
+# 龙头个股：行业 -> 代码列表（行业名与上面一致）
+stocks:
+  Technology: [AAPL, MSFT, NVDA]
+  Financials: [JPM, BRK-B, V]
+  Health Care: [LLY, UNH, JNJ]
+  Energy: [XOM, CVX]
+  Consumer Discretionary: [AMZN, TSLA, HD]
+  Consumer Staples: [COST, PG, WMT]
+  Industrials: [GE, CAT]
+  Communication Services: [GOOGL, META]
+  Utilities: [NEE]
+  Materials: [LIN]
+  Real Estate: [PLD]

@@ -1,0 +1,17 @@
+# 本地数据与个人记录
+data/
+config/transactions.csv
+config/*.local.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.egg-info/
+
+# 系统
+.DS_Store
+
+# 本机工具配置
+.claude/
